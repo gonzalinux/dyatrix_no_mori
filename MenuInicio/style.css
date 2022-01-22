@@ -1,0 +1,60 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:block;
+    background-image: url("./assets/fondoedit.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+
+}
+#mainMenu{
+    position: absolute;
+    min-width: 30vh;
+    width: 35vw;
+    margin: 0 auto;
+    left:50%;
+    transform: translateX(-50%);
+    background:rgba(0,0,0,0.5);
+
+    top: 13vh;
+    height: 76vh;
+    text-align: center;
+    color: white;
+}
+#titulo{
+    opacity: 1;
+    font-family: "Cinzel", serif;
+    min-font-size: 30px;
+    font-size: min(5vw,7vh);
+    padding-bottom: 8vh;
+    padding-top: 3vh;
+
+}
+.botonMenu{
+    font-family: "Cinzel", serif;
+    opacity: 1;
+    font-size: min(3vw,4vh);
+
+    padding-bottom: 3vh;
+
+}
+.botonMenu img{
+    width: 4vw;
+    transform: translateX(-2vw) translateY(2vw) rotate(-90deg);
+
+}
+.invisible{
+
+  display: none;
+}
+.botonMenu:hover{
+    color: antiquewhite;
+
+}

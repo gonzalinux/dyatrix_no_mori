@@ -1,0 +1,114 @@
+@font-face {
+    font-family:"Cinzel";
+    src: url("../fonts/Cinzel-Regular.ttf") format("truetype");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+input, button, textarea, :focus {
+    outline: none; // You should add some other style for :focus to help UX/a11y
+}
+
+body{
+    display:block;
+    background:rgba(0,0,0,0.5);
+    overflow: hidden;
+
+
+}
+.contenedor{
+    position: absolute;
+    min-width: 30vh;
+    width: 85vw;
+    margin: 0 auto;
+    left:50%;
+    transform: translateX(-50%);
+    background:rgba(0,0,0,0.9);
+    top: 13vh;
+    height: 76vh;
+    text-align: center;
+    color: white;
+}
+h1{
+    opacity: 1;
+    font-family: "Cinzel", serif;
+    min-font-size: 30px;
+    font-size: 5vw;
+    padding-bottom: 8vh;
+    padding-top: 3vh;
+
+}
+h3{
+    font-family: "Cinzel", serif;
+    opacity: 1;
+    font-size: 3vw;
+    padding-bottom: 3vh;
+    transition: 0.2s;
+
+}
+.botonMenu img{
+    width: 4vw;
+    transform: translateX(-2vw) translateY(2vw) rotate(-90deg);
+
+}
+.invisible{
+
+    display: none;
+}
+.botonMenu:hover{
+    color: antiquewhite;
+
+}
+li{
+    list-style:none;
+}
+.slidecontainer {
+   width: 20vw;
+    padding-left: 2vw;
+}
+
+/* The slider itself */
+.slider {
+    position: relative;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    border-radius: 20px;
+    width: 100%; /* Full-width */
+    height: 1vw; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 3vw; /* Set a specific slider handle width */
+    height:3vw; /* Slider handle height */
+    background: #6f1dbb; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100%;
+}
+#Salir:hover{
+    color:antiquewhite;
+}
+
+

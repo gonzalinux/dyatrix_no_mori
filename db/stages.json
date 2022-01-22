@@ -1,0 +1,12 @@
+{
+  "0":
+  {
+    "preload": "MenuInicio/preload.js",
+    "index": "MenuInicio/index.html"
+  },
+"test":{
+  "preload": "content/preload.js",
+  "index": "content/chatexample.html"
+}
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Dyatrix no Mori</title>
+    <link rel="stylesheet" href="../common/general.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <div id="nav"></div>
+  <div id="mainMenu">
+    <h1 id="titulo">Dyatrix<br>no<br>Mori</h1>
+    <h3 class="botonMenu" id="Jugar"><img class="invisible" src="../works/logo.png">Jugar</h3>
+    <h3 class="botonMenu" id="Ajustes"><img  class="invisible" src="../works/logo.png">Ajustes</h3>
+    <h3 class="botonMenu" id="Arte"><img  class="invisible" src="../works/logo.png">Arte</h3>
+    <h3 class="botonMenu" id="Salir"><img class="invisible" src="../works/logo.png">Salir</h3>
+  </div>
+  <audio id="sonido" autoplay src="assets/musica.mp3"></audio>
+
+
+    <!-- You can also require other files to run in this process -->
+    <script src="renderer.js"></script>
+  </body>
+</html>

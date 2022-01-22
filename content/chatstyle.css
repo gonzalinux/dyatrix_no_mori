@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Garamond, serif;
+}
+body{
+    background: url("./assets/fondo.png") no-repeat center center fixed ;
+    background-size: cover;
+}
+
+
+
+.chatcontainer{
+
+    position: absolute;
+    width: 70vw;
+    height: 30vh;
+    left:15vw;
+    top: 65vh;
+
+   }
+.speaker-class{
+    text-align: center;
+    left:0;
+    font-size: 4.5vh;
+    height: 6vh;
+    background: #950404;
+    color: white;
+    width: max-content;
+
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    clip-path: polygon(20% 0, 80% 0%, 100% 100%, 0% 100%);
+}
+.chat-text-class{
+
+    padding:1vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 0.5vh solid #950404;
+    font-size: 4vh;
+
+    width: inherit;
+    word-wrap: break-word;
+    line-height: 4.8vh;
+    height: 17vh;
+
+    background:  linear-gradient(129deg, rgba(182,182,182,0.9) 0%, rgba(212, 212, 212,0.9) 50%, rgba(193, 193, 193,0.9) 51%, rgba(252,252,252,0.9) 100%);
+    position: relative;
+    color: #000000;
+
+}
+.buttonbar{
+    text-align: center;
+    vertical-align: center;
+    display: flex;
+    position: relative;
+    left:0;
+    width: inherit;
+    height: 6vh;
+    background: rgba(250, 235, 215, 0.57);
+    flex-direction: row;
+
+}
+.buttonbar label{
+    flex:1;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    font-size: 1.3rem;
+
+}
+#characters{
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    height: 70vh;
+    display: block;
+}
+.character{
+    vertical-align: middle;
+    height: inherit;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-left: 20vw;
+    transform: translateX(-50%);
+}
