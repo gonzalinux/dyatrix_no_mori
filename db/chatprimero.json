@@ -1,0 +1,22 @@
+[
+  {
+  "speaker": "Lion",
+  "sprite": "./assets/kaeded.png",
+  "text": "Esto es un texto, pero no pasa nada porque esta formateado: <span style='color:red'>owa</span><SLOWER> <SLOWER><SLOWER> y ahora esto va lentito",
+  "sound": "none"
+},
+  {
+  "speaker": "Masu",
+  "sprite": "./assets/kaeded.png",
+  "text": "Este es el segundo texto ma bruda",
+  "sound": "none"
+
+},
+  {
+    "speaker": "Lion",
+    "sprite": "./assets/kaeded.png",
+    "text": "Esto es un texto, pero no pasa nada porque esta formateado: <span style='color:red'>owa</span><SLOWER> <SLOWER><SLOWER> y ahora esto va lentito",
+    "sound": "none"
+
+  }
+]

@@ -56,7 +56,6 @@ function cambiores(width,height){
 
   })
 
-
 }
 
 app.whenReady().then(() => {
@@ -160,8 +159,10 @@ ipcMain.on("resolucion",(event,args)=>{
 
 
 ipcMain.on("volumen",(event, arg)=>{
-    require("./db/data.json");
     data.volumen=arg;
-    fs.writeFileSync("./data.json",JSON.stringify(data));
+    fs.writeFileSync("./db/data.json",JSON.stringify(data));
 BrowserWindow.getAllWindows().map((ref) => ref.webContents.send('volumen', arg))
+})
+ipcMain.on("stage",(event, arg)=>{
+  mainWindow.loadFile(stage[arg].index);
 })

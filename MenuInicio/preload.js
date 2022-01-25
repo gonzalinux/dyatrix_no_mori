@@ -1,30 +1,29 @@
 // All of the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
-const {ipcRenderer}=require("electron")
-window.addEventListener('DOMContentLoaded', () => {
+const { contextBridge,ipcRenderer}=require("electron")
 
-    document.getElementById("sonido").volume=require("../db/data.json").volumen/100;
-
-    document.getElementById("Ajustes").onclick=()=>{
-        ipcRenderer.send("ajustes","entrar");
-
-
+contextBridge.exposeInMainWorld("api",{
+    require:(cosa)=>{
+        return require(cosa);
+    },
+    send: (channel, data) => {
+        // whitelist channels
+        let validChannels = ["ajustes","exit","stage","volumen"];
+        if (validChannels.includes(channel)) {
+            ipcRenderer.send(channel, data);
+        }
+    },
+    receive: (channel, func) => {
+        let validChannels = ["volumen"];
+        if (validChannels.includes(channel)) {
+            ipcRenderer.on(channel, (event, args) => func(args));
+        }else{
+            console.error("not a valid channel: "+channel)
+        }
     }
-    document.getElementById("Salir").onclick=()=>{
-        ipcRenderer.send("exit")
-    }
-
-
-    ipcRenderer.on("volumen",(event,arguments)=>{
-        document.getElementById("sonido").volume=arguments/100;
-        console.log("SE SUPONE QUE CAMBIO DE VOLUMEN")
-
-    });
-
-
-
 
 })
+
 
 
 

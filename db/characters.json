@@ -1,0 +1,15 @@
+{
+
+  "Lion": {
+    "colors": {
+      "primary": "#950404",
+      "secondary": "white"
+    }
+  },
+  "Masu": {
+    "colors": {
+      "primary": "#1707aa",
+      "secondary": "white"
+    }
+  }
+}
