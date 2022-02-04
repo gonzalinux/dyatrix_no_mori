@@ -21,60 +21,70 @@ let interval;
 let contador=0;
 const characters=window.api.require("../db/characters.json")
 let writing=false;
-let pilaelementos=[];
-
-
+let actual;
+let charcontador;
+let nodopointer;
 
 
 
 function playtext(){
-    let nodopointer=chatbox
-    let actual=texto[contador]
+    nodopointer=chatbox
+    actual=texto[contador]
     writing=true;
     nodopointer.innerHTML=""
-    let charcontador=0;
+   charcontador=0;
     if(actual.speaker){
         $("#speaker").html(actual.speaker)
         let root=$(":root")
         root.css("--primary-color",characters[actual.speaker].colors.primary)
         root.css("--secondary-color",characters[actual.speaker].colors.secondary)
     }
-     interval=setInterval(()=>{
-
-         if(charcontador===actual.text.length){
-             clearInterval(interval)
-             writing=false;
-             return
-         }
-         if(actual.text.charAt(charcontador)==="<"){
-             let tag="";
-             let segundo=actual.text.charAt(++charcontador)
-             while(actual.text.charAt(charcontador++)===">")
-                tag+=actual.text.charAt(charcontador)
-             if(segundo==="/") {
-                 nodopointer = nodopointer.parentNode;
-
-             }else{
-                 let elem=htmlToElement(tag);
-                 nodopointer=nodopointer.appendChild(elem);
-             }
-
-
-
-            return;
-
-
-         }
-
-
-
-
-         nodopointer.innerHTML+=actual.text.charAt(charcontador++);
-    },speed)
+     interval=changeInterval(undefined,speed,playEachChar)
 
 
 
 }
+
+function playEachChar(){
+    if(charcontador===actual.text.length){
+        clearInterval(interval)
+        writing=false;
+        return
+    }
+    if(actual.text.charAt(charcontador)==="<"){
+        let tag="<";
+        let segundo=actual.text.charAt(charcontador+1)
+        while(actual.text.charAt(charcontador++)!==">")
+            tag+=actual.text.charAt(charcontador)
+        console.log("tag:"+tag)
+        if(segundo==="/") {
+            nodopointer = nodopointer.parentNode;
+        }else{
+            switch (tag){
+                case "<SLOWER>": interval=changeInterval(interval,speed*2, playEachChar)
+                    break;
+                case "<FASTER>": interval=changeInterval(interval,speed*0.5, playEachChar)
+                    break;
+                default:
+                    let elem=htmlToElement(tag);
+                    nodopointer=nodopointer.appendChild(elem);
+            }
+
+
+
+
+        }
+        return;
+    }
+
+
+
+
+    nodopointer.innerHTML+=actual.text.charAt(charcontador++);
+}
+
+
+
 function skiptext(){
     if(writing) {
         clearInterval(interval)
@@ -94,4 +104,12 @@ function htmlToElement(html) {
     html = html.trim(); // Never return a text node of whitespace as the result
     template.innerHTML = html;
     return template.content.firstChild;
+}
+
+function changeInterval(interval,time, handler){
+
+    if(interval!==undefined)
+        clearInterval(interval)
+    return setInterval(handler,time)
+
 }

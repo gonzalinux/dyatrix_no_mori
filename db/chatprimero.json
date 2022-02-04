@@ -8,7 +8,7 @@
   {
   "speaker": "Masu",
   "sprite": "./assets/kaeded.png",
-  "text": "Este es el segundo texto ma bruda",
+  "text": "Este es el segundo texto ma bruda. Esta palabra esta vibrando- <span class='animado'>cosa que vibra</span>",
   "sound": "none"
 
 },

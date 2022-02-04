@@ -48,3 +48,20 @@ input, button, textarea, :focus {
     background: #950404;
     border-radius: 10px;
 }
+
+.animado{
+    display: inline-block;
+    animation: 0.2s vibraTexto infinite alternate;
+}
+@keyframes vibraTexto{
+    from{
+        transform: translateY(-0.2vh);
+        color: red;
+    }
+    to{
+        transform: translateY(0.2vh);
+        color: blue;
+    }
+
+
+}
