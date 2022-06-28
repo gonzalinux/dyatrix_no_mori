@@ -1,9 +1,15 @@
 {
   "0":
   {
-    "preload": "MenuInicio/preload.js",
+    "preload": "common/preload.js",
     "index": "MenuInicio/index.html"
   },
+"intro":{
+    "preload":  "common/preload.js",
+  "index": "content/stages/intro/index.html"
+
+
+},
 "test":{
   "preload": "content/preload.js",
   "index": "content/chatexample.html"

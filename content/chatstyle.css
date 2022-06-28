@@ -3,13 +3,15 @@
 
     --primary-color: #1707aa;
     --secondary-color: white;
+    --back-color: rgba(0, 0, 0, 0.7);
+    --text-color: white;
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Garamond, serif;
+    font-family: Geosans, serif;
 }
 body{
     background: url("./assets/fondo.png") no-repeat center center fixed ;
@@ -48,18 +50,21 @@ body{
     overflow-x: hidden;
     border: 0.5vh solid var(--primary-color);
     font-size: 4vh;
-
+    text-align: justify;
     width: inherit;
     word-wrap: break-word;
     line-height: 4.8vh;
     height: 17vh;
-
-    background:  linear-gradient(129deg, rgba(182,182,182,0.9) 0%, rgba(212, 212, 212,0.9) 50%, rgba(193, 193, 193,0.9) 51%, rgba(252,252,252,0.9) 100%);
+    background: var(--back-color);
+    /*background:  linear-gradient(129deg, rgba(182,182,182,0.9) 0%, rgba(212, 212, 212,0.9) 50%, rgba(193, 193, 193,0.9) 51%, rgba(252,252,252,0.9) 100%);*/
+    /*background: rgb(211,210,214);
+    background: linear-gradient(180deg, rgba(211,210,214,0.8) 0%, rgba(168,168,181,0.8) 75%, rgba(54,73,88,0.8) 100%);*/
     position: relative;
-    color: #000000;
+    color: var(--text-color);
 
 }
 .buttonbar{
+    opacity: 0;
     text-align: center;
     vertical-align: center;
     display: flex;
@@ -86,10 +91,27 @@ body{
     display: block;
 }
 .character{
+    position: absolute;
     vertical-align: middle;
     height: inherit;
     bottom: 0;
     margin-bottom: 0;
     margin-left: 20vw;
     transform: translateX(-50%);
+}
+#pos1{
+
+}
+#pos2{
+    left: 40vh;
+    bottom: 0;
+}
+#pos3 {
+    right: 20vh;
+}
+#pos4{
+
+    left: 50vh;
+
+
 }

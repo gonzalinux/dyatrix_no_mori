@@ -1,15 +1,61 @@
 {
 
   "Lion": {
+    "defaultspeed": 6,
     "colors": {
       "primary": "#950404",
       "secondary": "white"
+
     }
   },
   "Masu": {
+    "defaultspeed": 5,
     "colors": {
       "primary": "#1707aa",
       "secondary": "white"
     }
+  },
+  "Gala": {
+    "defaultspeed": 7,
+    "colors": {
+      "primary": "purple",
+      "secondary": "white"
+    }
+  },
+  "Koi": {
+    "defaultspeed": 4,
+    "colors": {
+      "primary": "#1707aa",
+      "secondary": "white"
+    }
+  },
+  "Shiwa": {
+    "defaultspeed": 4,
+    "colors": {
+      "primary": "#1707aa",
+      "secondary": "white"
+    }
+  },
+  "Yeike": {
+    "defaultspeed": 4,
+    "colors": {
+      "primary": "#1707aa",
+      "secondary": "white"
+    }
+  },
+  "Kon": {
+    "defaultspeed": 6,
+    "colors": {
+      "primary": "#1707aa",
+      "secondary": "white"
+    }
+  },
+  "Narrador": {
+    "colors": {
+      "primary": "rgba(0,0,0,0)",
+      "secondary": "rgba(0,0,0,0)"
+    },
+    "defaultspeed": 5,
+    "tags": "<c>"
   }
 }

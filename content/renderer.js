@@ -33,12 +33,28 @@ function playtext(){
     writing=true;
     nodopointer.innerHTML=""
    charcontador=0;
-    if(actual.speaker){
-        $("#speaker").html(actual.speaker)
-        let root=$(":root")
-        root.css("--primary-color",characters[actual.speaker].colors.primary)
-        root.css("--secondary-color",characters[actual.speaker].colors.secondary)
+    if(!actual.character)
+        return
+    let character=actual.character
+
+
+    $("#speaker").html(actual.speaker||character)
+    let root=$(":root")
+    const actualSpeaker=characters[character]
+    if(actualSpeaker.colors.primary)
+        root.css("--primary-color",actualSpeaker.colors.primary)
+    if(actualSpeaker.colors.secondary)
+        root.css("--secondary-color",actualSpeaker.colors.secondary)
+    if(actualSpeaker.colors.back)
+        root.css("--back-color",actualSpeaker.colors.back)
+    if(actualSpeaker.defaultspeed){
+        /*let mult=actualSpeaker.defaultspeed>5?2:0.5
+        speed=30*(actualSpeaker.defaultspeed%5*mult)*/
+        speed=actualSpeaker.defaultspeed*6;
+
     }
+
+
      interval=changeInterval(undefined,speed,playEachChar)
 
 

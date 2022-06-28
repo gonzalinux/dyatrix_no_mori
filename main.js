@@ -8,6 +8,8 @@ let height=720;
 let stage=require("./db/stages.json")
 let data=require("./db/data.json");
 
+let net=require("net")
+
 
 
 function createWindow () {
@@ -18,6 +20,7 @@ function createWindow () {
     width: width,
     height: height,
     frame:false,
+    backgroundColor:"#000d23",
     icon:path.join(__dirname,"works","logoconContorno.png"),
     webPreferences: {
       nodeIntegration:true,
@@ -163,6 +166,6 @@ ipcMain.on("volumen",(event, arg)=>{
     fs.writeFileSync("./db/data.json",JSON.stringify(data));
 BrowserWindow.getAllWindows().map((ref) => ref.webContents.send('volumen', arg))
 })
-ipcMain.on("stage",(event, arg)=>{
+ipcMain.on("stages",(event, arg)=>{
   mainWindow.loadFile(stage[arg].index);
 })

@@ -1,22 +1,35 @@
 [
+
   {
-  "speaker": "Lion",
+  "speaker": "Masumi",
+    "character": "Masu",
   "sprite": "./assets/kaeded.png",
-  "text": "Esto es un texto, pero no pasa nada porque esta formateado: <span style='color:red'>owa</span><SLOWER> <SLOWER><SLOWER> y ahora esto va lentito",
-  "sound": "none"
-},
-  {
-  "speaker": "Masu",
-  "sprite": "./assets/kaeded.png",
-  "text": "Este es el segundo texto ma bruda. Esta palabra esta vibrando- <span class='animado'>cosa que vibra</span>",
+  "text": "Hay una leyenda sobre un bosque que protege un mundo más allá del conocimiento humano. Un bosque en el que se dice que hay seres de todo tipo, a esta leyenda se la conoce como Dyatrix. Melodías dicen escucharse en los bosques de todo el mundo, cada vez que alguien las percibe, recuerda esa pequeña historia que enloqueció a algunos y mató de curiosidad a otros. Desde que esta leyenda se popularizó, aventureros de todo el mundo buscan el bosque del mito y nunca vuelven. Si te atreves a entrar, se dice que debes saber orientarte, no funciona como nuestra realidad y la cabeza te dará vueltas. Si te pierdes… un gran lobo guardián de bellos y brillantes colores te devorará a las puertas de su territorio…” Pero claro, es sólo una historia… jeje-\nMasu cierra el libro con una malévola sonrisa mientras mira a sus compañeros sentada en la mesa del tutor.",
   "sound": "none"
 
 },
   {
+    "speaker": "Narrador",
+    "character": "Narrador",
+    "sprite": "",
+    "text": "Gala pone un gesto de “que absurdo” y se ríe.",
+    "sound": "none"
+  },
+  {
     "speaker": "Lion",
+    "character": "Lion",
+    "sprite": "./assets/kaeded.png",
+    "text": "Esto es un texto, pero no pasa nada porque esta formateado: <span style='color:red'>owa</span><SLOWER> <SLOWER><SLOWER> y ahora esto va lentito",
+    "sound": "none"
+
+  },
+  {
+    "speaker": "Gala",
+    "character": "Gala",
     "sprite": "./assets/kaeded.png",
     "text": "Esto es un texto, pero no pasa nada porque esta formateado: <span style='color:red'>owa</span><SLOWER> <SLOWER><SLOWER> y ahora esto va lentito",
     "sound": "none"
 
   }
+
 ]
